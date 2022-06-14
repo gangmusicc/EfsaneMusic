@@ -18,7 +18,7 @@ async def pmPermit(client: USER, message: Message):
                 return
             await USER.send_message(
                 message.chat.id,
-                "Merhaba, Ben bir @rollroysmusic_bot asistanıyım. Herhangi bir sorun yaşıyorsanız sahibim @emiriviaa ile iletişime geçiniz.",
+                "Merhaba, Ben bir @GangalarMultiBot asistanıyım. Herhangi bir sorun yaşıyorsanız sahibim @GangalarGrubuGank ile iletişime geçiniz.",
             )
             return
  
