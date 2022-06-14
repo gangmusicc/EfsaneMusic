@@ -9,20 +9,25 @@ from helpers.filters import command, other_filters2
 async def start(_, message: Message):
                 await message.reply_photo(
                 "https://i.hizliresim.com/mepmi52.jpeg",
-                caption=(f"""**Merhaba {message.from_user.mention} 🎵\nBen {bot}!\nSesli sohbetlerde müzik çalabilen botum. Ban yetkisiz, Ses yönetimi yetkisi verip, Asistanı gruba ekleyiniz.\n\nDüzen Tasarım [𝐄𝐦𝐢𝐫 𝐑𝐢𝐯𝐢𝐚](https://t.me/emiriviaa).**"""),
+                caption=(f"""**Merhaba {message.from_user.mention} 🎵\nBen {bot}!\nSesli sohbetlerde müzik çalabilen botum. Ban yetkisiz, Ses yönetimi yetkisi verip, Asistanı gruba ekleyiniz.**"""),
          reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "➕ ❰ Grubuna Ekle ❱ ➕", url=f"https://t.me/MuzikindirmeBot?startgroup=true"
+                        "👨🏻‍💻 Sahip", url=f"https://t.me/GangalarGrubuGank=true"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🔊 Asistan", url="https://t.me/Roysmusicbott"
+                        "➕ ❰ Grubuna Ekle ❱ ➕", url=f"https://t.me/GangalarMultiBot?startgroup=true"
+                    )
+                ],
+                [
+                    InlineKeyboardButton(
+                        "🔊 Asistan", url="https://t.me/GankAsistan"
                     ),
                     InlineKeyboardButton(
-                        "💬 Sohbet", url="https://t.me/sohbet0lsun"
+                        "💬 Sohbet Grubumuz", url="https://t.me/GangalarApartmanSohbetGrubu"
                     )
                 ],
                 [
@@ -30,7 +35,7 @@ async def start(_, message: Message):
                         "🧩 Komutlar" , callback_data= "cbbilgi"
                     ),
                     InlineKeyboardButton(
-                        "Resmi Kanal 🇹🇷", url=f"https://t.me/sohbet0lsun"
+                        "📰 Haber Kanalımız", url=f"https://t.me/haberinizolsungangalargrubu"
                     )
                 ]
                 
@@ -54,10 +59,7 @@ async def bilgi(_, message: Message):
                  ],[
                      InlineKeyboardButton(
                          "Ana menü🏠", callback_data="cbstart")
-                 ],[
-                     InlineKeyboardButton(
-                         "⚙ Geliştirici", url="https://t.me/emiriviaa")
-                 ]
+                 ],
              ]
          )
     )
@@ -80,10 +82,7 @@ async def cbbilgi(_, query: CallbackQuery):
           InlineKeyboardButton(
             "🏠Ana Menü", callback_data="cbstart")
         ],
-        [
-          InlineKeyboardButton(
-            "⚙ Geliştirici", url="https://t.me/emiriviaa")
-        ]
+        
       ]
      ))
 
@@ -93,10 +92,6 @@ async def herkes(_, query: CallbackQuery):
     await query.edit_message_text(f"""<b>Selam {query.from_user.mention}!\nBu botun herkes için komut menüsü 😉\n\n ▶️ /oynat - şarkı çalmak için youtube url'sine veya şarkı dosyasına yanıt verme\n ▶️ /oynat <song name> - istediğiniz şarkıyı çal\n 🔴 \n 🎵 /bul <song name> - istediğiniz şarkıları hızlı bir şekilde bulun\n 🎵 /vbul istediğiniz videoları hızlı bir şekilde bulun\n 🔍 /ara <query> - youtube'da ayrıntıları içeren videoları arama\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
-                 [
-                     InlineKeyboardButton(
-                         "⚙ Geliştirici", url="https://t.me/emiriviaa")
-                 ],
                  [
                      InlineKeyboardButton(
                          "⬅️ Geri ⬅️", callback_data="cbbilgi")
@@ -113,10 +108,6 @@ async def admin(_, query: CallbackQuery):
              [
                  [
                      InlineKeyboardButton(
-                         "⚙ Geliştirici", url="https://t.me/emiriviaa")
-                 ],
-                 [
-                     InlineKeyboardButton(
                          "⬅️ Geri ⬅️", callback_data="cbbilgi")
                  ] 
              ]
@@ -126,28 +117,33 @@ async def admin(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
-    await query.edit_message_text(f"""**Merhaba {query.from_user.mention} 🎵\nBen {bot}!\nSesli sohbetlerde müzik çalabilen botum. Ban yetkisiz, Ses yönetimi yetkisi verip, Asistanı gruba ekleyiniz.\n\nDüzen Tasarım [𝐄𝐦𝐢𝐫 𝐑𝐢𝐯𝐢𝐚](https://t.me/emiriviaa).**""",
+    await query.edit_message_text(f"""**Merhaba {query.from_user.mention} 🎵\nBen {bot}!\nSesli sohbetlerde müzik çalabilen botum. Ban yetkisiz, Ses yönetimi yetkisi verip, Asistanı gruba ekleyiniz.**""",
          reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "➕ ❰ Grubuna Ekle ❱ ➕", url=f"https://t.me/MuzikindirmeBot?startgroup=true"
+                        "👨🏻‍💻 Sahip", url=f"https://t.me/GangalarGrubuGank=true"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🔊 Asistan", url="https://t.me/Roysmusicbott"
-                    ),
-                    InlineKeyboardButton(
-                        "💬 Sohbet", url="https://t.me/sohbet0lsun"
+                        "➕ ❰ Grubuna Ekle ❱ ➕", url=f"https://t.me/GangalarMultiBot?startgroup=true"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🌀 Komutlar" , callback_data= "cbbilgi"
+                        "🔊 Asistan", url="https://t.me/GankAsistan"
                     ),
                     InlineKeyboardButton(
-                        "Resmi Kanal 🇹🇷", url=f"https://t.me/sohbet0lsun"
+                        "💬 Sohbet Grubumuz", url="https://t.me/GangalarApartmanSohbetGrubu"
+                    )
+                ],
+                [
+                    InlineKeyboardButton(
+                        "🧩 Komutlar" , callback_data= "cbbilgi"
+                    ),
+                    InlineKeyboardButton(
+                        "📰 Haber Kanalımız", url=f"https://t.me/haberinizolsungangalargrubu"
                     )
                 ]
                 
