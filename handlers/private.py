@@ -14,7 +14,7 @@ async def start(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "👨🏻‍💻 Sahip", url=f"https://t.me/GangalarGrubuGank=true"
+                        "👨🏻‍💻 Sahip", url=f"https://t.me/GangalarGrubuGank"
                     )
                 ],
                 [
